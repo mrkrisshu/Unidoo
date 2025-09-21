@@ -1,3 +1,15 @@
+## 🎬 Live Demo
+
+Experience the Manufacturing Management System in action!  
+Watch our full demo highlighting all core modules and features:
+
+[![Watch Demo](https://img.shields.io/badge/Watch-Demo-blue?style=for-the-badge)](https://drive.google.com/file/d/1Aen3ZLrwJjnCYceXtTeFBWiYnZivDjER/view?usp=sharing)
+
+> The demo showcases our dashboard, BOM management, manufacturing orders, inventory, reporting, and more—all in real-time.
+
+
+
+
 # 🏭 Manufacturing Management System
 
 > **The Ultimate Manufacturing Operations Platform** - A comprehensive, enterprise-grade web-based manufacturing management system built with PHP and MySQL that transforms how you manage your entire production lifecycle.
