@@ -3,7 +3,7 @@
 Experience the Manufacturing Management System in action!  
 Watch our full demo highlighting all core modules and features:
 
-[![Watch Demo](https://img.shields.io/badge/Watch-Demo-blue?style=for-the-badge)](https://drive.google.com/file/d/1Aen3ZLrwJjnCYceXtTeFBWiYnZivDjER/view?usp=sharing)
+[![Watch Demo](https://img.shields.io/badge/Watch-Demo-blue?style=for-the-badge)](https://youtu.be/XkgVyPlH-lY)
 
 > The demo showcases our dashboard, BOM management, manufacturing orders, inventory, reporting, and more—all in real-time.
 
