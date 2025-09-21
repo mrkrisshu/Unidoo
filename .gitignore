@@ -1,0 +1,37 @@
+# PHP
+*.log
+*.tmp
+*.cache
+
+# Database
+*.sql.bak
+*.db
+
+# Config files with sensitive data
+config/database.php
+
+# Temporary files
+temp/
+tmp/
+cache/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Uploads
+uploads/
+files/
+
+# Logs
+logs/
+*.log
+
+# PHPMailer (if not needed in repo)
+# PHPMailer-master/

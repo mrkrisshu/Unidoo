@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Responsiveness Test - Manufacturing Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .test-section h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        .device-frame {
+            border: 2px solid #333;
+            border-radius: 10px;
+            margin: 10px;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .mobile {
+            width: 375px;
+            height: 667px;
+        }
+        .tablet {
+            width: 768px;
+            height: 1024px;
+        }
+        .desktop {
+            width: 1200px;
+            height: 800px;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .test-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .test-link {
+            padding: 10px 15px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+        .test-link:hover {
+            background: #0056b3;
+        }
+        .checklist {
+            list-style-type: none;
+            padding: 0;
+        }
+        .checklist li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .checklist li:before {
+            content: "☐ ";
+            color: #007bff;
+            font-weight: bold;
+        }
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .status-pass { background-color: #28a745; }
+        .status-fail { background-color: #dc3545; }
+        .status-pending { background-color: #ffc107; }
+        
+        @media (max-width: 768px) {
+            .device-frame {
+                width: 100% !important;
+                height: 400px !important;
+                display: block;
+                margin: 10px 0;
+            }
+            .test-links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 Mobile Responsiveness Test</h1>
+        <p>Test the Manufacturing Management System across different device sizes and screen resolutions.</p>
+        
+        <div class="test-section">
+            <h2>🔗 Quick Test Links</h2>
+            <div class="test-links">
+                <a href="http://localhost:8000" class="test-link" target="_blank">Dashboard</a>
+                <a href="http://localhost:8000/auth/login.php" class="test-link" target="_blank">Login</a>
+                <a href="http://localhost:8000/bom/" class="test-link" target="_blank">BOM Management</a>
+                <a href="http://localhost:8000/manufacturing_orders/" class="test-link" target="_blank">Manufacturing Orders</a>
+                <a href="http://localhost:8000/work_orders/" class="test-link" target="_blank">Work Orders</a>
+                <a href="http://localhost:8000/stock/" class="test-link" target="_blank">Stock Ledger</a>
+                <a href="http://localhost:8000/work_centers/" class="test-link" target="_blank">Work Centers</a>
+                <a href="http://localhost:8000/reports/" class="test-link" target="_blank">Reports</a>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>📋 Mobile Responsiveness Checklist</h2>
+            <ul class="checklist">
+                <li><span class="status-indicator status-pending"></span>Navigation menu collapses properly on mobile</li>
+                <li><span class="status-indicator status-pending"></span>Tables are horizontally scrollable on small screens</li>
+                <li><span class="status-indicator status-pending"></span>Forms are easy to fill on touch devices</li>
+                <li><span class="status-indicator status-pending"></span>Buttons are touch-friendly (minimum 44px)</li>
+                <li><span class="status-indicator status-pending"></span>Text is readable without zooming</li>
+                <li><span class="status-indicator status-pending"></span>Cards and statistics display properly</li>
+                <li><span class="status-indicator status-pending"></span>Modals and popups work on mobile</li>
+                <li><span class="status-indicator status-pending"></span>Charts and graphs are responsive</li>
+                <li><span class="status-indicator status-pending"></span>Search and filter controls are accessible</li>
+                <li><span class="status-indicator status-pending"></span>Page load times are acceptable on mobile</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>📱 Device Simulation</h2>
+            <p>Test the system in different device frames (use browser dev tools for more accurate testing):</p>
+            
+            <h3>Mobile View (375x667)</h3>
+            <div class="device-frame mobile">
+                <iframe src="http://localhost:8000" title="Mobile View"></iframe>
+            </div>
+            
+            <h3>Tablet View (768x1024)</h3>
+            <div class="device-frame tablet">
+                <iframe src="http://localhost:8000" title="Tablet View"></iframe>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🧪 Testing Instructions</h2>
+            <ol>
+                <li><strong>Browser Dev Tools:</strong> Use Chrome/Firefox dev tools to simulate different devices</li>
+                <li><strong>Real Devices:</strong> Test on actual mobile phones and tablets if available</li>
+                <li><strong>Orientation:</strong> Test both portrait and landscape orientations</li>
+                <li><strong>Touch Interactions:</strong> Verify all buttons, links, and form elements work with touch</li>
+                <li><strong>Performance:</strong> Check page load times on slower mobile connections</li>
+                <li><strong>Accessibility:</strong> Ensure proper contrast and font sizes for mobile viewing</li>
+            </ol>
+        </div>
+
+        <div class="test-section">
+            <h2>📊 Test Results</h2>
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background: #f8f9fa;">
+                        <th style="padding: 10px; border: 1px solid #ddd;">Module</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Mobile (320-480px)</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Tablet (481-768px)</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Desktop (769px+)</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Dashboard</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Authentication</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">BOM Management</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Manufacturing Orders</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Work Orders</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Stock Ledger</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Work Centers</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Reports</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">⏳ Pending</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="test-section">
+            <h2>🔧 Common Mobile Issues to Check</h2>
+            <ul>
+                <li><strong>Viewport Meta Tag:</strong> Ensure proper viewport configuration</li>
+                <li><strong>Touch Targets:</strong> Minimum 44px for touch-friendly interaction</li>
+                <li><strong>Font Sizes:</strong> Minimum 16px to prevent zoom on iOS</li>
+                <li><strong>Horizontal Scrolling:</strong> Avoid unless intentional (like tables)</li>
+                <li><strong>Form Inputs:</strong> Proper keyboard types and validation</li>
+                <li><strong>Image Optimization:</strong> Responsive images for different screen densities</li>
+                <li><strong>Performance:</strong> Optimize for slower mobile connections</li>
+                <li><strong>Navigation:</strong> Collapsible menu for mobile devices</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Simple script to update test status
+        function updateTestStatus(module, device, status) {
+            // This would be used to update test results dynamically
+            console.log(`${module} - ${device}: ${status}`);
+        }
+
+        // Add click handlers for test links
+        document.querySelectorAll('.test-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                console.log('Testing:', this.textContent);
+            });
+        });
+    </script>
+</body>
+</html>
